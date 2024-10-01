@@ -1,6 +1,7 @@
 from typing import List, Dict
 from haystack import Document, component
 
+
 @component
 class Thresholder:
     """
@@ -22,4 +23,4 @@ class Thresholder:
         :param documents: List of documents to filter.
         :returns: List of documents whose score is greater than the threshold.
         """
-        return {"documents" : [doc for doc in documents if doc.score >= self.threshold]}
+        return {"documents": [doc for doc in documents if doc.score >= self.threshold]}
